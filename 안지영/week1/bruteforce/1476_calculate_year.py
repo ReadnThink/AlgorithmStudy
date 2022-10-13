@@ -1,4 +1,4 @@
-# 3085 https://www.acmicpc.net/problem/3085
+# 1476 https://www.acmicpc.net/problem/1476
 # 성공 - 처음부터 iteration 하며 판단
 
 '''문제

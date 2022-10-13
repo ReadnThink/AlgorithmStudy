@@ -1,5 +1,5 @@
 # 3085 https://www.acmicpc.net/problem/3085
-# 
+# 아직 못함
 
 '''문제
 상근이는 어렸을 적에 "봄보니 (Bomboni)" 게임을 즐겨했다.
