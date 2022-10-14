@@ -1,4 +1,5 @@
-# 왜 틀렸을까??
+# 정답
+# 왜 틀렸을까?? -> 문제 제대로 읽기!
 
 # 9명 중에 2명을 선택해서 제외 -> 9c2 -> 36가지 경우의 수 발생
 from itertools import combinations
@@ -19,7 +20,7 @@ numbers_combi = list(combinations(numbers_list, 7))
 # 10,10,10,15,15,15,15,15,15
 
 for numbers in numbers_combi:
-    if sum(numbers) >= 100:
+    if sum(numbers) == 100:
         for num in sorted(numbers):
             print(num)
 
