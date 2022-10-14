@@ -1,3 +1,5 @@
+# 어떻게 풀면 좋을까...?
+
 input_num = int(input())
 
 count = 0;
