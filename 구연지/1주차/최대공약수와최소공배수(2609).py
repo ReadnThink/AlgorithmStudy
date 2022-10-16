@@ -18,10 +18,14 @@ num1 = int(inputs[0]); num2 = int(inputs[1])
 # 유클리드 호제법을 통해서 진행
 # 재귀 함수 이용
 
+# 120=54×2+12 이므로 gcd(120,54)=gcd(54,12)
+
+
 def gcd(a, b):
     if (b==0): return a
     else: return gcd(b, a%b)
 
+# 최대공약수 * 최소공배수 = 두 수의 곱
 def lcm(a, b):
     return int(a*b/gcd(a,b))
 

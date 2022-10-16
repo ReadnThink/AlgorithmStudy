@@ -17,6 +17,7 @@ num9 = int(input())
 numbers_list = [num1, num2, num3, num4, num5, num6, num7, num8, num9]
 numbers_combi = list(combinations(numbers_list, 7))
 
+print(numbers_combi)
 # 10,10,10,15,15,15,15,15,15
 
 for numbers in numbers_combi:
