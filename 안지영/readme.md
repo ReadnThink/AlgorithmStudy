@@ -1,2 +1,5 @@
 ### Week1
-math & brute force algorithm
+수학, 브루트포스
+
+### Week2
+브루트포스-N과M , 브루트포스-재귀
