@@ -3,11 +3,9 @@ package week3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class NextPermutation_10972 {
+public class 다음순열 {
    static int[] arr;
    static int N;
 
@@ -19,7 +17,7 @@ public class NextPermutation_10972 {
 
         //순열 및 조합을 생성할 때 재귀적으로 구현하지 않고 각 인덱스 값을 비교하여 모든 경우의 인덱스 값을 뽑아내는 방법
 
-        //StringTokenizer 클래스는 문자열을 우리가 지정한 구분자로 문자열을 쪼개주는 클래스
+        //StringTokenizer 클래스는 문자열을 우리가 지정한 구분자로 문자열을 쪼개ㅑㅑ주는 클래스
         //bufferedReader로 입력받으면 line으로밖에 못받기 때문에 문자열로 쪼개야 한다.
         StringTokenizer stringTokenizer = new StringTokenizer(br.readLine());
         for(int i=0; i<N; i++) {
