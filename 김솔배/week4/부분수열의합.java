@@ -21,13 +21,14 @@ public class 부분수열의합 {
 
 
         dfs(0, 0); // 부분수열의 합 구하기
-        if (S == 0) System.out.println(answer - 1); // S 0일때 처리
+        if (S == 0) System.out.println(answer - 1); // S = 0일때 처리(0 하나의 조합)
         else  System.out.println(answer);
 
     }
 
     private static void dfs(int depth, int sum) {
         // arr = -7, -3, -2, 5, 8
+        // S == 0
         if (depth == N) {
             if (sum == S) answer++;
             return;
