@@ -1,4 +1,4 @@
-package week5;
+package week4;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class 부분수열의합 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt(); //배열 길이
-        S = sc.nextInt(); //부분 수열의 합의 갯수
+        S = sc.nextInt(); //부분 수열의 합
         arr = new int[N]; //배열
 
 
