@@ -15,7 +15,6 @@ public class 피보나치 {
         if(x == 1 || x == 2) return 1;
         if(isused[x] != 0) return isused[x];
         return isused[x] = f(x -1) + f(x - 2);
-//        return f(x-1) + f(x-2);
     }
 
     public static void main(String[] args) {

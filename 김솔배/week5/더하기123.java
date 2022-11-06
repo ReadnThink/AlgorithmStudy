@@ -17,42 +17,26 @@ public class 더하기123 {
     정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를 구하는 프로그램을 작성하시오.
      */
 
-    static int[] result = new int[11];
-    static int[][] isused = new int[10000][10000];
-    static int sum = 0;
-    static int cnt = 0;
-    static int j = 0;
-    public static int f(int k, int n){
+    //n이 11보다 작은 양수이기때문에 backtracking으로도 풀리지만, DP연습이기에 DP로 푼다.
 
-        if(k == n){
-           for (int j = 0; j < n; j++){
-               sum += result[j];
-               if(n == sum){
-                   cnt++;
-                   int[] a = Arrays.copyOfRange(result,0,j+1);
-                   isused[j++] = a;
-                   System.out.println("sum" + sum);
-                   System.out.println("result"+Arrays.toString(result));
-                   break;
-               }
-           }
-           sum = 0;
-        } else {
-            for (int i = 1; i <= n; i++) {
-                result[k] = i;
-                f(k+1,n);
-            }
-        }
-        return cnt;
+    static int[] dp = new int[12];
+    public static int f(int n){
+        if(n == 1) return 1;
+        if(n == 2) return 2;
+        if(n == 3) return 4;
+
+//        if(result != 0) return result;
+
+        return f(n - 1) + f(n - 2) + f(n - 3);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int[] nums = new int[N];
-        for (int i = 0; i < N; i++) {
-            nums[i] = sc.nextInt();
-            System.out.println(f(0, nums[i]));
+        int T = sc.nextInt();
+
+        for (int i = 0; i < T; i++) {
+            int N = sc.nextInt();
+            System.out.println(f(N));
         }
     }
 }
