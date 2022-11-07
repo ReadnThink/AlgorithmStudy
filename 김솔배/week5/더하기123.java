@@ -19,15 +19,34 @@ public class 더하기123 {
 
     //n이 11보다 작은 양수이기때문에 backtracking으로도 풀리지만, DP연습이기에 DP로 푼다.
 
+
+    /*
+    1 = 1
+
+    2 = 1,1 || 2
+
+    3 = 1,1,1 || 1,2 || 2, 1
+
+    4 = 1,1,1,1 || 1,2,1 || 2,1,1 ||
+        1,1,2 || 2,2 ||
+        1,3
+
+    5 = 1,1,1,1,1 || 1,2,1,1 || 2,1,1,1 || 1,1,2,1 || 2,2,1 || 1,3,1
+        1,1,1,2 || 1,2,2 || 2,1,2
+        1,1,3 || 2,3
+
+     */
+
     static int[] dp = new int[12];
     public static int f(int n){
         if(n == 1) return 1;
         if(n == 2) return 2;
         if(n == 3) return 4;
 
+ //        int result = dp[n];
 //        if(result != 0) return result;
-
-        return f(n - 1) + f(n - 2) + f(n - 3);
+        if(dp[n] != 0) return dp[n];
+        return dp[n] = f(n - 1) + f(n - 2) + f(n - 3);
     }
 
     public static void main(String[] args) {
