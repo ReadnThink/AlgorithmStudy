@@ -9,14 +9,14 @@ public class 타일링2n {
         if(n == 1) return 1;
         if(n == 2) return 2;
         if(isused[n] != 0) return isused[n];
-        return isused[n] = ( solution(n - 1) + solution(n -2) );
+        return isused[n] = ( solution(n - 1) + solution(n -2) ) % 10007;
     }
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-//        int n = sc.nextInt();
-        System.out.println(solution(4));
+        int n = sc.nextInt();
+        System.out.println(solution(n));
     }
 }
