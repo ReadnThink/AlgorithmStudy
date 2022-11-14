@@ -67,7 +67,7 @@ public class 동물원 {
             }
         }
         printBoolean(n);
-        System.out.println("cnt = "+cnt);
+        System.out.println("cnt = "+cnt % 9001);
         reset(n);
         solution(n,k + 1);
 
