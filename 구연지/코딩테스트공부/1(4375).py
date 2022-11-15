@@ -6,7 +6,6 @@ try :
         pass
     else:
         find_multiple = False
-        multiple_number = 0
 
 
         while find_multiple == False:

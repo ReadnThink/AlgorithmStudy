@@ -2,6 +2,9 @@ import sys
 from itertools import product
 
 # 중복 순열 돌리기
+# 10=3*3+1 -> 4
+# 3^10 = 59049 -> 6만번 * 4 -> 24만번 -> 돌릴만함
+# 메모리...?
 
 def how_many_case(x):
     case = 0
@@ -15,9 +18,6 @@ def how_many_case(x):
                 case += 1
 
     return case
-
-    # 3^10 = 59049 -> 6만번 * 4 -> 24만번 -> 돌릴만함
-    # 메모리...?
 
 
 testcase_num = int(input())

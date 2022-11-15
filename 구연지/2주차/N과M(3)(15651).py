@@ -10,7 +10,6 @@ nums_list = list(product(range(1, int(inputs[0])+1), repeat = int(inputs[1])))
 
 print_iter(nums_list)
 
-
 # for nums in nums_list:
 #     print_str = ""
 #     for num in nums:

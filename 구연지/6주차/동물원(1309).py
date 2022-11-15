@@ -15,6 +15,8 @@ f(n) = 2(f(n-1) - f(n-2)) + 3f(n-2) = 2f(n-1) + f(n-2)
 
 """
 
+
+
 # 메모리 문제
 # row_num = int(input())
 # result_list = [0] * row_num
@@ -33,8 +35,8 @@ f(n) = 2(f(n-1) - f(n-2)) + 3f(n-2) = 2f(n-1) + f(n-2)
 """
 
 row_num = int(input())
-forward_num = 3
-backward_num = 7
+forward_num = 3 # n-2
+backward_num = 7 # n-1
 
 # N이 1부터 10,000 까지 -> 1일때랑 2일때 조건을 반드시 포함해주어야한다!!!!
 if row_num == 1:
@@ -52,6 +54,7 @@ else:
 
     print(backward_num%9901)
 # 왜 틀렸을까? 100%에서? -> 1일때, 2일때 조건을 안 넣어줌
+
 
 # import sys
 # sys.setrecursionlimit(10**10)
@@ -77,3 +80,6 @@ else:
 
 # -> 시간초과...
 # 꼬리 재귀 방식? 어떻게...?
+
+# calculate_case(rows, total)
+# calculate_case(rows-1, total+row를 넣었을 때 더해지는 수)
