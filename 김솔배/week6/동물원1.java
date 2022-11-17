@@ -24,9 +24,9 @@ public class 동물원1 {
             dp[i][1] = (dp[i-1][0] + dp[i-1][2]) % MOD;
             dp[i][2] = (dp[i-1][0] + dp[i-1][1]) % MOD;
             System.out.printf("dp[0] = %d,   dp[1] = %d,   dp[2] = %d\n",dp[i][0], dp[i][1], dp[i][2]);
-
         }
-        int answer = dp[N][0] + dp[N][1] + dp[N][2];
+
+        int answer = (dp[N][0] + dp[N][1] + dp[N][2]) % MOD;
         System.out.println("answer = " + answer);
     }
 
