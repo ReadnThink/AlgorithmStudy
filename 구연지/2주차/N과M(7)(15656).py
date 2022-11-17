@@ -5,4 +5,3 @@ input_list = ''.join(sorted(input().split(" ")))
 
 
 
-
