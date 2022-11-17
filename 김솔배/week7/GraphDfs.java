@@ -51,7 +51,7 @@ class Graph {
             for (Node n : r.adjacent) {
                 if (n.marked == false) { //그 스택이 방문하지 않았다면
                     n.marked = true; //방문표시하고
-                    stack.push(n); // 뺸다.
+                    stack.push(n); // 스택에 넣는다.
                 }
             }
             visit(r);
