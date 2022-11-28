@@ -9,8 +9,6 @@ public class GameMapShortestDistance {
     //장애물이있으면 갈 수 없다. 0 = 이동불가 1 = 이동가능
     //첫위치 1,1 도착위치 (n,m)
 
-    //
-
     static class Start{
         int x;
         int y;
@@ -38,34 +36,42 @@ public class GameMapShortestDistance {
         Queue<Start> queue = new LinkedList<>();
         queue.add(xy);
         maps[xy.x][xy.y] = 0; //처음 위치 0으로 변경
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty() && cnt < 100){
             //종료조건
             if(xy.x == n && xy.y == m) {
-                System.out.println(cnt);
+                System.out.println(cnt + 1); //시작위치도 + 1로 취급한다.
                 return;
             }
 
             queue.remove(xy);
 
+            //4방향 탐색 알고리즘???
             //배열 초과를 어떻게 잡을까??
-            if(maps[xy.x][xy.y + 1] == 1){
+            if(xy.y >= 0 && xy.y < n && maps[xy.x][xy.y + 1] == 1){
                 cnt++;
+                maps[xy.x][xy.y] = 0;
                 xy.y++;
+//                System.out.println("y++"+cnt);
                 queue.add(xy);
-            }else if(maps[xy.x][xy.y - 1] == 1){
+            }else if(xy.y > 0 && xy.y < n && maps[xy.x][xy.y - 1] == 1){
                 cnt++;
+                maps[xy.x][xy.y] = 0;
                 xy.y--;
+//                System.out.println("y--"+cnt);
                 queue.add(xy);
-            }else if(maps[xy.x + 1][xy.y] == 1){
+            }else if(xy.x >= 0 && xy.x < m && maps[xy.x + 1][xy.y] == 1){
                 cnt++;
+                maps[xy.x][xy.y] = 0;
                 xy.x++;
+//                System.out.println("x++"+cnt);
                 queue.add(xy);
-            }else if(maps[xy.x - 1][xy.y] == 1){
+            }else if(xy.x > 0 && xy.x < m && maps[xy.x - 1][xy.y] == 1){
                 cnt++;
+                maps[xy.x][xy.y] = 0;
                 xy.x--;
+//                System.out.println("x--"+cnt);
                 queue.add(xy);
             }
         }
-
     }
 }
