@@ -1,11 +1,7 @@
-package week7;
+package dfsBfs;
 
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.IntFunction;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 // DFS는 Stack으로 구현한다.
 // DFS Reculsive는 호출을 하면 출력을 먼저 합니다. //Reculsive는 stack에 위에서부터 출력하기 때문
@@ -35,7 +31,7 @@ class Graph {
         //객체의 주소를 꺼내기 때문에 값을 여기서 저장해도 nodes전체가 바뀐다.
         Node n1 = nodes[i1];
         Node n2 = nodes[i2];
-        if (!n1.adjacent.contains(i1)) {
+        if (!n1.adjacent.contains(n2)) {
             n1.adjacent.add(n2);
         }
         if (!n2.adjacent.contains(n1)) {

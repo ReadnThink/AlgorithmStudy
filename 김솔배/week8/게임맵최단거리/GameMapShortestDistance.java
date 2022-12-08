@@ -62,8 +62,6 @@ public class GameMapShortestDistance {
             }
 
         }
-
-
     }
     public static void main(String[] args) {
 
