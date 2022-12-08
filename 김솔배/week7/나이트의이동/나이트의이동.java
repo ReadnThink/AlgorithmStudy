@@ -1,4 +1,4 @@
-package week7;
+package week7.나이트의이동;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

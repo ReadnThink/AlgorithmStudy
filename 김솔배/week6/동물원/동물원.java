@@ -1,6 +1,5 @@
-package week6;
+package week6.동물원;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class 동물원 {

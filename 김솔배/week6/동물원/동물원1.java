@@ -1,4 +1,4 @@
-package week6;
+package week6.동물원;
 
 import java.util.Scanner;
 
