@@ -3,7 +3,7 @@ package week10.정수삼각형;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution {
+public class SolutionBfs {
     // Dfs보다는 Dfs가 더 효율적일거 같다??
     // queue에 넣을때 들어갈때 curIdx, curIdx + 1 넣기
     // 도착할 곳이 이미 계산되었고, 그 결과가 자기가 될 수보다 크다면, DP에 저장된 값 반환
@@ -57,7 +57,7 @@ public class Solution {
         int[][] arr = new int[][]{{7}, {3, 8}, {8, 1, 0}, {2, 7, 4, 4}, {4, 5, 2, 6, 5}};
         sumArr = new int[arr.length + 1][arr[arr.length - 1].length]; //dp의 크기는 arr의 크기만큼이다. 저장해야할 인덱스가 arr의 길이만큼이기 때문에
         dp = new int[arr.length + 1][arr[arr.length - 1].length]; //dp의 크기는 arr의 크기만큼이다. 저장해야할 인덱스가 arr의 길이만큼이기 때문에
-        Solution s = new Solution();
+        SolutionBfs s = new SolutionBfs();
         System.out.println(s.solution(arr));
     }
 }
