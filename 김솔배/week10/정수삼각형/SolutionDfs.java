@@ -3,11 +3,11 @@ package week10.정수삼각형;
 import java.util.Stack;
 
 public class SolutionDfs {
-    // Dfs보다는 Dfs가 더 효율적일거 같다??
+    // Bfs보다는 Dfs가 더 효율적일거 같다??
     // queue에 넣을때 들어갈때 curIdx, curIdx + 1 넣기
     // 도착할 곳이 이미 계산되었고, 그 결과가 자기가 될 수보다 크다면, DP에 저장된 값 반환
 
-    //queue에는 Idx를 넣는다!!!
+    //queue에는 Idx를 넣는다
     static int[][] dp;
     static int[][] sumArr;
         public int solution(int[][] triangle) {

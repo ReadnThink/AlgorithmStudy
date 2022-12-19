@@ -20,11 +20,19 @@ public class SolutionLoop {
         for (int i = 1; i < triangle[triangle.length -1].length; ++i) {
             r = Math.max(r, dp[triangle.length - 1][i]);
         }
+        System.out.println(Arrays.deepToString(dp));
         return r;
     }
     public static void main(String[] args) {
+        /*
+        * 7
+        * 3, 8
+        * 8, 1, 0
+        * 2, 7, 4, 4
+        * 4, 5, 2 ,6, 5
+        * */
         int[][] triangle = new int[][]{{7}, {3, 8}, {8, 1, 0}, {2, 7, 4, 4}, {4, 5, 2, 6, 5}};
-        solution(triangle);
+        int result = solution(triangle);
+        System.out.println(result);
     }
-
 }

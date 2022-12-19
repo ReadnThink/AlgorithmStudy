@@ -1,43 +1,50 @@
 package week11;
 
 import java.util.*;
-public class Solution{
+public class Main {
     //이동할 수 있는 경우
     int[] dx = {1, -1, 2};
 
     private int solution(int n, int k) {
+        boolean[][] dp = new boolean[1][100001];
         Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{n, 0});
+        int answer = 0;
+        q.add(new int[]{n, answer});
+        dp[0][n] = true;
 
         while (!q.isEmpty()) {
             int[] curr = q.poll();
             int x = curr[0];
             int cnt = curr[1];
 
-            if (x == k) return cnt;
+            if(x == k) {
+                answer = cnt;
+                break;
+            }
 
-            // x가 음수가 되면 안된다.
-            if(x < -1) continue;
             for (int i = 0; i < dx.length; i++) {
-                if(i == 2) {
-                    int nX = x * dx[i];
-                    q.add(new int[]{nX, cnt + 1});
-                }else {
-                    int nX = x + dx[i];
+                int nX;
+                if(i != 2) nX = x + dx[i];
+                else nX = x * dx[i];
+
+                if (nX < 0 || nX > 100000) continue;
+
+                if(dp[0][nX] == false){
+                    dp[0][nX] = true;
                     q.add(new int[]{nX, cnt + 1});
                 }
             }
+
         }
-        return 0;
+        return answer;
     }
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        Solution s = new Solution();
+        Main s = new Main();
         System.out.println(s.solution(n, k));
     }
 

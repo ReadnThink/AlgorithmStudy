@@ -46,7 +46,7 @@ public class GameMapShortestDistance {
             int[] current = queue.remove();
             int cX = current[0];
             int cY = current[1];
-            System.out.println(visited[current[0]][current[1]]);
+//            System.out.println(visited[current[0]][current[1]]);
 
             for(int i = 0; i < 4; i++){
                 int nX = cX + dx[i];
@@ -60,8 +60,8 @@ public class GameMapShortestDistance {
                     queue.add(new int[]{nX, nY});
                 }
             }
-
         }
+        System.out.println(Arrays.deepToString(visited));
     }
     public static void main(String[] args) {
 
