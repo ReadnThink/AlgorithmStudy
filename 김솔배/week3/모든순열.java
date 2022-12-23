@@ -8,7 +8,6 @@ public class 모든순열 {
     public static int N;
     public static int[] arr;
     public static boolean[] isused = new boolean[10];
-
     public static void solution(int k){
         if(k == N){
             for (int i : arr) {

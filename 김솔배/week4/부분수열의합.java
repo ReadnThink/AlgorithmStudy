@@ -31,6 +31,7 @@ public class 부분수열의합 {
         // S == 0
         if (depth == N) {
             if (sum == S) answer++;
+            System.out.println(sum);
             return;
         }
         dfs(depth + 1, sum + arr[depth]); // 1. 해당 인덱스 더함
