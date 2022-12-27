@@ -34,11 +34,9 @@ public class Main {
                     q.add(new int[]{nX, cnt + 1});
                 }
             }
-
         }
         return answer;
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -47,5 +45,4 @@ public class Main {
         Main s = new Main();
         System.out.println(s.solution(n, k));
     }
-
 }
